@@ -11,13 +11,28 @@
                       RefreshControlColor="Red">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        
+
                         <ImageCell ImageSource="{Binding profileImage}}" Text="{Binding DisplayName}" TextColor="Orange" Detail="{Binding Position}" />
 
                     </DataTemplate>
+
                 </ListView.ItemTemplate>
             </ListView>
-            
+
+            <ListView x:Name="lst2"
+                      ItemsSource="{Binding Employees}"
+                      IsPullToRefreshEnabled="True"
+                      RefreshControlColor="Red">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <TextCell Text="{Binding DisplayName}" TextColor="Blue" Detail="{Binding Position}" />
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

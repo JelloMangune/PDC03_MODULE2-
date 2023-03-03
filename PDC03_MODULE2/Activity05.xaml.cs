@@ -21,6 +21,7 @@ namespace PDC03_MODULE2
 			InitializeComponent ();
 			{
 				lst.ItemsSource = employees;
+				lst2.ItemsSource= employees;
 
 				employees.Add(new employee { DisplayName = "Jello Mangune", Position = "President", profileImage="profile1.png" });
                 employees.Add(new employee { DisplayName = "Calvin Pamandanan", Position = "Vice President", profileImage = "profile2.jpg" });
